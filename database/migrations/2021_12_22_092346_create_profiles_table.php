@@ -24,6 +24,7 @@ class CreateProfilesTable extends Migration
             $table->longText("body")->nullable();
             $table->integer("year_old");
             $table->timestamp("birthday_at")->nullable();
+            $table->integer('sort_order')->nullable();
             $table->timestamps();
         });
     }

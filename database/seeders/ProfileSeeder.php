@@ -25,5 +25,7 @@ class ProfileSeeder extends Seeder
         }
 
         \DB::table('profiles')->insert($profile);
+        \DB::statement('UPDATE profiles SET sort_order = id');
+
     }
 }
