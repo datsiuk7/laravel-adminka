@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Director;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,5 +22,6 @@ class DatabaseSeeder extends Seeder
         ];
         \DB::table('users')->insert($users);
         $this->call(ProfileSeeder::class);
+
     }
 }

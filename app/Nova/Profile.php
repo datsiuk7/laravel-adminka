@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use App\Nova\Actions\ProductPriceAction;
 use App\Nova\Metrics\CountUser;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
@@ -16,15 +17,22 @@ use Laravel\Nova\Fields\Status;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Trix;
-use Benjaminhirsch\NovaSlugField\Slug;
+use Drobee\NovaSluggable\SluggableText;
+use Drobee\NovaSluggable\Slug;
 use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use Timothyasp\Color\Color;
 use Laravel\Nova\Fields\VaporImage;
 use Laravel\Nova\Http\Requests\NovaRequest;
+//use Bernhardh\NovaIconSelect\NovaIconSelect;
+//use Bernhardh\NovaIconSelect\IconProviders\FontAwesomeIconProvider;
+use NovaIcon\Icon;
+use Mdixon18\Fontawesome\Fontawesome;
 use Waynestate\Nova\CKEditor;
+use OptimistDigital\NovaSortable\Traits\HasSortableRows;
 
 class Profile extends Resource
 {
+    use HasSortableRows;
     /**
      * The model the resource corresponds to.
      *
@@ -59,33 +67,36 @@ class Profile extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
 
-            TextWithSlug::make("імя", 'name')->sortable()->rules('required')->slug('slug'),
+            SluggableText::make("імя", 'name')->sortable()->rules('required'),
 
 //            TextWithSlug::make('url')
 //                ->slug('slug'),
-
-            Slug::make('Slug')->rules("required"),
+            Slug::make('Slug')->slugSeparator('-'),
+//            Slug::make('Slug')->sortable()->rules("required")->slugLanguage('ru'),
 //            Color::make("Color"),
-            Number::make('sort_order'),
+//            Number::make('sort_order'),
 
-            Trix::make("Текст Trix", 'body')->sortable(),
+
+            Fontawesome::make('Icon')->addButtonText('Вибрати іконку')->defaultIcon('far', ''),
+
+//            Trix::make("Текст Trix", 'body')->sortable(),
             CKEditor::make("Текст cke", 'body')->options([
                 'height' => 300,
-                'toolbar' => [
-                    ['Source','-','Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
-                    ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
-                    ['Image','Table','HorizontalRule','SpecialChar','PageBreak'],
-                    '/',
-                    ['Bold','Italic','Strike','-','Subscript','Superscript'],
-                    ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote','CreateDiv'],
-                    ['JustifyLeft','JustifyCenter','JustifyRight'],
-                    ['Link','Unlink','Anchor'],
-                    '/',
-                    ['Format','FontSize'],
-                    ['Maximize', 'ShowBlocks','-','About']
-                ],
-            ])->sortable(),
-            Number::make("Вік", 'year_old')->sortable(),
+//                'toolbar' => [
+//                    ['Source','-','Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
+//                    ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
+//                    ['Image','Table','HorizontalRule','SpecialChar','PageBreak'],
+//                    '/',
+//                    ['Bold','Italic','Strike','-','Subscript','Superscript'],
+//                    ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote','CreateDiv'],
+//                    ['JustifyLeft','JustifyCenter','JustifyRight'],
+//                    ['Link','Unlink','Anchor'],
+//                    '/',
+//                    ['Format','FontSize'],
+//                    ['Maximize', 'ShowBlocks','-','About']
+//                ],
+            ])->sortable()->hideFromIndex(),
+            Number::make("Вік", 'year_old')->default(" ")->sortable(),
             Date::make('create', "created_at")->default(" ")->sortable(),
             Date::make('update', "updated_at")->default(" ")->sortable(),
             Date::make('birthday', "birthday_at")->default(" ")->sortable(),
@@ -135,6 +146,8 @@ class Profile extends Resource
      */
     public function actions(Request $request)
     {
-        return [];
+        return [
+            new ProductPriceAction()
+        ];
     }
 }

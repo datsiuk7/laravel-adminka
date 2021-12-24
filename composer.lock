@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0a3e8b5d071bc4c7db3a81a8fc0a47c5",
+    "content-hash": "2d87996b67d4f1b38bec8a63b5993f6f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -114,6 +114,51 @@
                 "source": "https://github.com/tomhatzer/nova-slug-field/tree/1.2.6"
             },
             "time": "2020-09-23T17:10:16+00:00"
+        },
+        {
+            "name": "bernhardh/nova-icon-select",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bernhardh/nova-icon-select.git",
+                "reference": "e4821dd5a5753ee80ddb76dddb0226f2aede627f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bernhardh/nova-icon-select/zipball/e4821dd5a5753ee80ddb76dddb0226f2aede627f",
+                "reference": "e4821dd5a5753ee80ddb76dddb0226f2aede627f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Bernhardh\\NovaIconSelect\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bernhardh\\NovaIconSelect\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A larvel nova icon select field",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/bernhardh/nova-icon-select/issues",
+                "source": "https://github.com/bernhardh/nova-icon-select/tree/1.0.0"
+            },
+            "time": "2020-12-22T20:10:11+00:00"
         },
         {
             "name": "brick/math",
@@ -294,6 +339,61 @@
                 "source": "https://github.com/cakephp/chronos"
             },
             "time": "2021-10-17T02:44:05+00:00"
+        },
+        {
+            "name": "david-griffiths/nova-dark-theme",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/David-Griffiths/Nova-Dark-Theme.git",
+                "reference": "dfd190f4d3454e5ec066b886ad687c135b680f3b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/David-Griffiths/Nova-Dark-Theme/zipball/dfd190f4d3454e5ec066b886ad687c135b680f3b",
+                "reference": "dfd190f4d3454e5ec066b886ad687c135b680f3b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "DavidGriffiths\\NovaDarkTheme\\ThemeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DavidGriffiths\\NovaDarkTheme\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Griffiths",
+                    "homepage": "https://github.com/David-Griffiths",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A dark theme for Laravel Nova",
+            "homepage": "https://github.com/David-Griffiths/Nova-Dark-Theme",
+            "keywords": [
+                "dark",
+                "laravel",
+                "nova",
+                "theme"
+            ],
+            "support": {
+                "issues": "https://github.com/David-Griffiths/Nova-Dark-Theme/issues",
+                "source": "https://github.com/David-Griffiths/Nova-Dark-Theme"
+            },
+            "time": "2019-02-16T22:07:27+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -946,6 +1046,53 @@
                 }
             ],
             "time": "2020-11-24T19:55:57+00:00"
+        },
+        {
+            "name": "drobee/nova-sluggable",
+            "version": "1.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drobee/nova-sluggable.git",
+                "reference": "d197423f92e510a475870a35281ecd69b4ba534c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drobee/nova-sluggable/zipball/d197423f92e510a475870a35281ecd69b4ba534c",
+                "reference": "d197423f92e510a475870a35281ecd69b4ba534c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
+                "illuminate/support": "5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Drobee\\NovaSluggable\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drobee\\NovaSluggable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Slug field for Laravel Nova",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/drobee/nova-sluggable/issues",
+                "source": "https://github.com/drobee/nova-sluggable/tree/1.2.6"
+            },
+            "time": "2021-03-22T09:20:01+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -2325,6 +2472,52 @@
             "time": "2021-11-21T11:48:40+00:00"
         },
         {
+            "name": "mdixon18/fontawesome",
+            "version": "v0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mdixon18/fontawesome.git",
+                "reference": "9a6acd586abc38936ed20f1ba327e38488b7e203"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mdixon18/fontawesome/zipball/9a6acd586abc38936ed20f1ba327e38488b7e203",
+                "reference": "9a6acd586abc38936ed20f1ba327e38488b7e203",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mdixon18\\Fontawesome\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mdixon18\\Fontawesome\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A FontAwesome Nova field.",
+            "keywords": [
+                "FontAwesome",
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/mdixon18/fontawesome/issues",
+                "source": "https://github.com/mdixon18/fontawesome/tree/v0.2.1"
+            },
+            "time": "2020-09-23T19:38:32+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "2.3.5",
             "source": {
@@ -2841,6 +3034,110 @@
                 "source": "https://github.com/opis/closure/tree/3.6.2"
             },
             "time": "2021-04-09T13:42:10+00:00"
+        },
+        {
+            "name": "optimistdigital/nova-sortable",
+            "version": "2.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/optimistdigital/nova-sortable.git",
+                "reference": "ab2f5d7a9986b0ab9c6d424d5566e99cdbe5a356"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/optimistdigital/nova-sortable/zipball/ab2f5d7a9986b0ab9c6d424d5566e99cdbe5a356",
+                "reference": "ab2f5d7a9986b0ab9c6d424d5566e99cdbe5a356",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/nova": "^3.0",
+                "optimistdigital/nova-translations-loader": "^3.0.0",
+                "php": ">=7.3.0",
+                "spatie/eloquent-sortable": "^3.10.0|^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "OptimistDigital\\NovaSortable\\ToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "OptimistDigital\\NovaSortable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "This Laravel Nova package allows you to reorder models in a Nova resource's index view using drag & drop.",
+            "keywords": [
+                "eloquent-sortable",
+                "laravel",
+                "nova",
+                "optimistdigital"
+            ],
+            "support": {
+                "issues": "https://github.com/optimistdigital/nova-sortable/issues",
+                "source": "https://github.com/optimistdigital/nova-sortable/tree/2.4.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/optimistdigital",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-10-12T15:20:50+00:00"
+        },
+        {
+            "name": "optimistdigital/nova-translations-loader",
+            "version": "3.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/optimistdigital/nova-translations-loader.git",
+                "reference": "d66303a70e0f1c45d60c78a05658011777a00ce7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/optimistdigital/nova-translations-loader/zipball/d66303a70e0f1c45d60c78a05658011777a00ce7",
+                "reference": "d66303a70e0f1c45d60c78a05658011777a00ce7",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^7.21 || ^8.0",
+                "laravel/nova": "^3.0",
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "OptimistDigital\\NovaTranslationsLoader\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "This Laravel Nova package helps developers load translations into their packages.",
+            "keywords": [
+                "laravel",
+                "nova",
+                "optimistdigital",
+                "translations"
+            ],
+            "support": {
+                "issues": "https://github.com/optimistdigital/nova-translations-loader/issues",
+                "source": "https://github.com/optimistdigital/nova-translations-loader/tree/3.1.2"
+            },
+            "time": "2021-06-18T12:46:46+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -3857,6 +4154,60 @@
                 }
             ],
             "time": "2021-09-25T23:10:38+00:00"
+        },
+        {
+            "name": "scadini/nova-icon",
+            "version": "v0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scadini/nova-icon.git",
+                "reference": "5bda076c7650482be6fee4c36e8c68e8ea1dfc99"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scadini/nova-icon/zipball/5bda076c7650482be6fee4c36e8c68e8ea1dfc99",
+                "reference": "5bda076c7650482be6fee4c36e8c68e8ea1dfc99",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NovaIcon\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NovaIcon\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "João Santos",
+                    "email": "joaoecoceanus@gmail.com"
+                }
+            ],
+            "description": "A Laravel Nova icon field.",
+            "keywords": [
+                "field",
+                "icon",
+                "laravel",
+                "nova",
+                "svg"
+            ],
+            "support": {
+                "issues": "https://github.com/scadini/nova-icon/issues",
+                "source": "https://github.com/scadini/nova-icon/tree/v0.2.1"
+            },
+            "time": "2019-09-22T10:51:07+00:00"
         },
         {
             "name": "spatie/eloquent-sortable",

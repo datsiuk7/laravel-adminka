@@ -17,16 +17,21 @@ class CreateProfilesTable extends Migration
             $table->id();
             $table->string("name");
 
+
             $table->bigInteger('user_id')->unsigned()->index()->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
-            $table->string("slug")->nullable();
+
+            $table->string("slug")->nullable()->unique();
+            $table->string("icon")->nullable()->default("far fa-");
             $table->longText("body")->nullable();
-            $table->integer("year_old");
+            $table->integer("year_old")->nullable();
             $table->timestamp("birthday_at")->nullable();
             $table->integer('sort_order')->nullable();
             $table->timestamps();
         });
+
+        DB::statement('UPDATE profiles SET sort_order = id');
     }
 
     /**

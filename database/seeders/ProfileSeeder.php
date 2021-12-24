@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Director;
+use App\Models\Film;
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 
@@ -24,8 +26,12 @@ class ProfileSeeder extends Seeder
             ];
         }
 
-        \DB::table('profiles')->insert($profile);
-        \DB::statement('UPDATE profiles SET sort_order = id');
+//        \DB::table('profiles')->insert($profile);
+//        \DB::statement('UPDATE profiles SET sort_order = id');
+
+//        Director::factory(30)->create();
+        Film::factory(30)->create();
+
 
     }
 }
