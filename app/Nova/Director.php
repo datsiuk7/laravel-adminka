@@ -4,6 +4,8 @@ namespace App\Nova;
 
 use Drobee\NovaSluggable\SluggableText;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\HasOne;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -31,7 +33,7 @@ class Director extends Resource
     public static $search = [
         'id',
     ];
-
+    public static $defaultSort = 'id';
     /**
      * Get the fields displayed by the resource.
      *
@@ -43,6 +45,7 @@ class Director extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
             SluggableText::make("імя", 'name')->sortable()->rules('required','unique'),
+            BelongsTo::make('film')->sortable(),
 
         ];
     }

@@ -10,6 +10,6 @@ class Film extends Model
     use HasFactory;
 
     public function director(){
-        return $this->belongsTo(director::class);
+        return $this->belongsTo(Director::class);
     }
 }

@@ -9,7 +9,7 @@ class Director extends Model
 {
     use HasFactory;
 
-//    public function film(){
-//        return $this->hasOne(Film::class);
-//    }
+    public function film(){
+        return $this->hasOne(Film::class);
+    }
 }

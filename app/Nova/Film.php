@@ -23,7 +23,7 @@ class Film extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -33,6 +33,7 @@ class Film extends Resource
     public static $search = [
         'id',
     ];
+    public static $defaultSort = 'id';
 
     /**
      * Get the fields displayed by the resource.
